@@ -561,7 +561,7 @@ local_install_java() {
     local adoptium_java_url="https://api.adoptium.net/v3/binary/latest/${version}/${releasetype}/${os}/${arch}/${imagetype}/${implementation}/${heapsize}/eclipse?project=jdk"
     download_file "${adoptium_java_url}" "${DTC_JAVA_HOME}/jdk.tar.gz"
     echo "Extracting JDK from archive file."
-    # TODO: should we not delete a previsouly installed on?
+    # TODO: should we not delete a previously installed one?
     # Otherwise we may get a mix of different Java versions.
     tar -zxf "${DTC_JAVA_HOME}/jdk.tar.gz" --strip 1 -C "${DTC_JAVA_HOME}/."
     rm -f "${DTC_JAVA_HOME}/jdk/jdk.tar.gz"
