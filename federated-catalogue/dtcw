@@ -576,7 +576,7 @@ assert_doctoolchain_installed() {
     if ! is_doctoolchain_installed "${env}"; then
         # We reach this point if the user executes a command in an
         # environment where docToolchain is not installed.
-        # Note that 'docker' always has a command (no instalation required)
+        # Note that 'docker' always has a command (no installation required)
         error "doctoolchain - command not found [environment '${env}']"
         how_to_install_doctoolchain "${version}"
         exit ${ERR_DTCW}
